@@ -51,23 +51,36 @@ function App() {
             <li onClick={()=>{ setSelect(''); setSelect(3);}} className={select==3?'selected':''}>Volum</li>
           </ul>
         </header>
-        {/* OUTLET */}
         <Length></Length>
-        {/* OUTLET */}
       </div>
     )
   }
+  // https://github.com/nosferatoy/units-converter#readme
   function Length(){
     const [inputValue, setInputValue] = useState('');
     const [fromUnit, setFromUnit] = useState('');
     const [toUnit, setToUnit] = useState('');
     const [result, setResult] = useState(0);
-
+    const [conversions, setConversions] = useState([
+      {unitTo:"mile", value:0},
+      {unitTo:"in", value:0},
+      {unitTo:"km", value:0},
+      {unitTo:"m", value:0},
+      {unitTo:"cm", value:0},
+      {unitTo:"yd", value:0}
+    ])
     useEffect(()=>{
       if(inputValue && fromUnit && toUnit){
         let converted = convert(inputValue,fromUnit).to(toUnit)
-        converted.toFixed(2);
-        setResult(converted);
+        let convertedFix = converted.toFixed(2);
+        // Top Viewer
+        setResult(convertedFix);
+        // Other Units
+        conversions.map((each)=>{
+          let convertedShow = convert(inputValue,fromUnit).to(each.unitTo);
+          let fixed = convertedShow.toFixed(2)
+          each.value = fixed;
+        })
       } else {
         setResult(0);
       }
@@ -79,7 +92,7 @@ function App() {
           <input type="number" onChange={(e)=>{setInputValue(Number(e.target.value));}} value={inputValue}/>
           <select value={fromUnit} onChange={(e)=>{setFromUnit(e.target.value)}}>
             <option value="">Unit</option>
-            <option value="miles">miles</option>
+            <option value="mile">mile</option>
             <option value="in">in</option>
             <option value="km">km</option>
             <option value="m">m</option>
@@ -103,10 +116,11 @@ function App() {
       </div>
       <ul className='otherUnits'>
         <li className='header'>Other units</li>
-        <li><span>32</span><span className='units'>km</span></li>
-        <li><span>32</span><span className='units'>mile</span></li>
-        <li><span>32</span><span className='units'>mm</span></li>
-        <li><span>32</span><span className='units'>cm</span></li>
+        { 
+          conversions.map((item)=>{
+            return (<li><span><b>{item.value}</b></span><span className='units'>{item.unitTo}</span></li>)
+          })
+        }
       </ul>
     </div>
     )

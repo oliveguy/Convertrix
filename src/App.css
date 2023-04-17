@@ -100,6 +100,9 @@ div.main header ul.category li:nth-of-type(4) {
   border-bottom-right-radius: 8px;
   border-right: 1px solid #fff;
 }
+div.main header ul.category li:hover {
+  cursor: pointer;
+}
 div.main header ul.category li.selected {
   color: #2e6fe9;
   background-color: #fff;
@@ -147,10 +150,13 @@ div.unitComponets select, div.unitComponets input {
   height: 2rem;
   color: #2e6fe9;
 }
+div.unitComponets select:focus, div.unitComponets input:focus {
+  outline: none;
+}
 div.unitComponets select {
   margin-left: 1rem;
   margin-right: 1rem;
-  width: 60px;
+  width: 100px;
   text-align: center;
   font-weight: 800;
   color: #2e6fe9;
