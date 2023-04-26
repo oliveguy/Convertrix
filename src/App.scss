@@ -39,9 +39,11 @@ div.index {
   }
   button{
     @include Btn();
+    padding: 0.45rem 1.5rem;
+    font-weight: bold;
     &:hover{
       cursor: pointer;
-      background: linear-gradient(90deg, rgb(20, 38, 202) 0%, rgb(120,160,212) 100%);
+      // background: linear-gradient(90deg, rgb(20, 38, 202) 0%, rgb(120,160,212) 100%);
     }
   }
   @media (prefers-reduced-motion: no-preference) {
@@ -78,6 +80,9 @@ div.main{
     }
     img.hambuger{
       height:18px;
+      &:hover{
+        cursor: pointer;
+      }
     }
     ul.category{
       display:flex;
@@ -120,10 +125,16 @@ div.logoSet{
   img.main-symbol{
     width: 25px;
     animation: logo-spin infinite 10s linear;
+    &:hover{
+      cursor: pointer;
+    }
   }
   img.main-text{
     height: 20px;
     margin-left: .5rem;
+    &:hover{
+      cursor: pointer;
+    }
   }
 }
 div.unitComponets{
@@ -217,7 +228,17 @@ div.unitComponets{
     }
   }
 }
-
+// Info
+div.info{
+  div.infoSection{
+    border-radius: 10px;
+    background-color: #ebebeb;
+    padding: 1rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 // RESPONSIVE
 @media screen and (min-width: 600px){
   header{

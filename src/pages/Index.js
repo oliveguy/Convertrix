@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import logoSymbol from '../img/logo-symbol-color.png';
 import logo from '../img/logo-color.png';
 import logoSymbolWhite from '../img/logo-symbol-white.png';

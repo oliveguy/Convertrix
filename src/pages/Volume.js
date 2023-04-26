@@ -4,20 +4,25 @@ import { Routes, Route, useNavigate, Outlet, Switch } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import convert from 'convert';
 
-function Mass(){
+function Volume(){
   var convert = require('convert-units');
   const [inputValue, setInputValue] = useState('');
   const [fromUnit, setFromUnit] = useState('');
   const [toUnit, setToUnit] = useState('');
   const [result, setResult] = useState(0);
   const [conversions, setConversions] = useState([
-    {unitTo:"g", value:0},
-    {unitTo:"mg", value:0},
-    {unitTo:"kg", value:0},
-    {unitTo:"lb", value:0},
-    {unitTo:"oz", value:0},
-    {unitTo:"mt", value:0},
-    {unitTo:"t", value:0}
+    {unitTo:"mm3", value:0},
+    {unitTo:"cm3", value:0},
+    {unitTo:"m3", value:0},
+    {unitTo:"km3", value:0},
+    {unitTo:"in3", value:0},
+    {unitTo:"ft3", value:0},
+    {unitTo:"ft3", value:0},
+    {unitTo:"cup", value:0},
+    {unitTo:"qt", value:0},
+    {unitTo:"gal", value:0},
+    {unitTo:"l", value:0},
+    {unitTo:"yd3", value:0}
   ])
   useEffect(()=>{
     if(inputValue && fromUnit && toUnit){
@@ -44,14 +49,19 @@ function Mass(){
       <div className='inputArea'>
         <input type="number" onChange={(e)=>{setInputValue(Number(e.target.value));}} value={inputValue}/>
         <select value={fromUnit} onChange={(e)=>{setFromUnit(e.target.value)}}>
-        <option value="">Unit</option>
-        <option value="g">g</option>
-        <option value="mg">mg</option>
-        <option value="kg">kg</option>
-        <option value="lb">lb</option>
-        <option value="oz">oz</option>
-        <option value="mt">mt</option>
-        <option value="t">t</option>
+          <option value="">Unit</option>
+          <option value="mm3">mm3</option>
+          <option value="cm3">cm3</option>
+          <option value="m3">m3</option>
+          <option value="km3">km3</option>
+          <option value="in3">in3</option>
+          <option value="ft3">ft3</option>
+          <option value="f3">f3</option>
+          <option value="cup">cup</option>
+          <option value="qt">qt</option>
+          <option value="gal">gal</option>
+          <option value="l">l</option>
+          <option value="yd3">yd3</option>
         </select>
       </div>
       <span className='eq'>=</span>
@@ -59,21 +69,26 @@ function Mass(){
         <input type="number" value={result}/>
         <select value={toUnit} onChange={(e)=>{setToUnit(e.target.value)}}>
           <option value="">Unit</option>
-          <option value="g">g</option>
-          <option value="mg">mg</option>
-          <option value="kg">kg</option>
-          <option value="lb">lb</option>
-          <option value="oz">oz</option>
-          <option value="mt">mt</option>
-          <option value="t">t</option>
+          <option value="mm3">mm3</option>
+          <option value="cm3">cm3</option>
+          <option value="m3">m3</option>
+          <option value="km3">km3</option>
+          <option value="in3">in3</option>
+          <option value="ft3">ft3</option>
+          <option value="f3">f3</option>
+          <option value="cup">cup</option>
+          <option value="qt">qt</option>
+          <option value="gal">gal</option>
+          <option value="l">l</option>
+          <option value="yd3">yd3</option>
         </select>
       </div>
     </div>
     <ul className='otherUnits'>
       <li className='header'>Other units</li>
       { 
-        conversions.map((item)=>{
-          return (<li><span><b>{item.value}</b></span><span className='units'>{item.unitTo}</span></li>)
+        conversions.map((item, index)=>{
+          return (<li key={index}><span><b>{item.value}</b></span><span className='units'>{item.unitTo}</span></li>)
         })
       }
     </ul>
@@ -81,4 +96,4 @@ function Mass(){
   )
 }
 
-export default Mass
+export default Volume

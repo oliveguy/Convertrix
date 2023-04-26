@@ -34,14 +34,24 @@ div.index button {
   border: none;
   padding: 0.45rem 0.6rem;
   border-radius: 15px;
+  padding: 0.45rem 1.5rem;
+  font-weight: bold;
 }
 div.index button:hover {
   cursor: pointer;
-  background: linear-gradient(90deg, rgb(20, 38, 202) 0%, rgb(120, 160, 212) 100%);
 }
 @media (prefers-reduced-motion: no-preference) {
   div.index .symbol-logo {
-    animation: logo-spin infinite 10s linear;
+    -webkit-animation: logo-spin infinite 10s linear;
+            animation: logo-spin infinite 10s linear;
+  }
+}
+@-webkit-keyframes logo-spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
 @keyframes logo-spin {
@@ -73,6 +83,9 @@ div.main header div.topHeader {
 }
 div.main header img.hambuger {
   height: 18px;
+}
+div.main header img.hambuger:hover {
+  cursor: pointer;
 }
 div.main header ul.category {
   display: flex;
@@ -114,11 +127,18 @@ div.logoSet {
 }
 div.logoSet img.main-symbol {
   width: 25px;
-  animation: logo-spin infinite 10s linear;
+  -webkit-animation: logo-spin infinite 10s linear;
+          animation: logo-spin infinite 10s linear;
+}
+div.logoSet img.main-symbol:hover {
+  cursor: pointer;
 }
 div.logoSet img.main-text {
   height: 20px;
   margin-left: 0.5rem;
+}
+div.logoSet img.main-text:hover {
+  cursor: pointer;
 }
 
 div.unitComponets {
@@ -208,6 +228,15 @@ div.unitComponets ul.otherUnits li {
 }
 div.unitComponets ul.otherUnits li span.units {
   margin-left: 0.25rem;
+}
+
+div.info div.infoSection {
+  border-radius: 10px;
+  background-color: #ebebeb;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media screen and (min-width: 600px) {

@@ -1,6 +1,7 @@
+/*eslint-disable*/
 import logoSymbolWhite from '../img/logo-symbol-white.png';
 import logoWhite from '../img/logo-white.png';
-import hambuger from '../img/hambuger.png';
+import hambuger from '../img/i.png';
 
 import '../App.css';
 import { Routes, Route, useNavigate, Outlet, Switch } from 'react-router-dom';
@@ -18,7 +19,7 @@ function Main(){
             <img src={logoSymbolWhite} alt="logo-symbol" className='main-symbol' />
             <img src={logoWhite} alt="logo-text" className='main-text'/>
           </div>
-          <img src={hambuger} alt="hambugerMenu" className='hambuger'/>
+          <img src={hambuger} onClick={ ()=>{navigate("/main/info");}}alt="hambugerMenu" className='hambuger'/>
         </div>
         <ul className='category'>
           <li onClick={()=>{ navigate("/main/length"); setSelect(''); setSelect(0); }} className={select==0?'selected':''}>Length</li>
