@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+![convertrix-logo](https://github.com/oliveguy/live-chat-app/assets/103153516/727f7aed-d9d3-4921-b3b1-78a78fe19b57)
+## Convertrix - versatile unit converter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Challenges
+People frequently have a difficulty in converting units since they do not know each formula to convert between different units of measurement.
 
-## Available Scripts
+### Solution
+Convertrix is designed to simplify the process of converting between different units of measurement. Whether you need to convert units for length, mass, area, and volume, Convertrix has got you covered. With just a few clicks or taps, you can convert between different units, such as meters to feet, grams to ounces, liters to gallons, and much more.
 
-In the project directory, you can run:
+### Features
+-	Can convert units for length, mass, area, and volume.
+-	Display all the conversion options in an organized manner.
+-	User-friendly and intuitive UI, making it easy for anyone to use.
+-	Simple and straightforward navigation to select units.
+-	Fully responsive design to fit any devices.
 
-### `npm start`
+### Screenshot
+- Index page
+![convertrix-index](https://github.com/oliveguy/live-chat-app/assets/103153516/032ec361-459d-4479-b3d5-f7dde346bfb1)
+- Various Conversions
+![convertrix-desktop_mass](https://github.com/oliveguy/live-chat-app/assets/103153516/566dd6e9-eb4d-48b2-8732-55e44d6c8374)
+- Responsive design for mobile
+![convertrix-mobile](https://github.com/oliveguy/live-chat-app/assets/103153516/2fa45d1d-64d6-4527-8903-d65f989f178f)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Process
+-	Low fidelity wireframe
+-	Create UI & UX using React.js.
+-	CSR(Client Side Rendering) built using react-router-dom.
+-	Find library to convert various units and implementation.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Built with
+![React](https://img.shields.io/badge/-React-222222?style=for-the-badge&logo=react)
+![sass](https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
-### `npm test`
+### What I’ve learned
+-	Tab function using useState
+-	CSR with React-router-dom such as useNavigate, and Outlet
+-	How to create reusable react components
+-	How to use ternary operator and map method to show multiple unit conversions
+-	How to create form using react state
+-	How to use SCSS with @mixin and nesting for semantic CSS structure
+-	How to deploy static React app
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Continued development and Learning
+-	Add more unit conversions.
+-	Save functionality to store unit conversion history
 
-### `npm run build`
+### Author
+Sunghyun Park
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Resources
+-	https://www.npmjs.com/package/convert-units
