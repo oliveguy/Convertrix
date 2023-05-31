@@ -15,11 +15,11 @@ Convertrix is designed to simplify the process of converting between different u
 -	Fully responsive design to fit any devices.
 
 ### Screenshot
-Index page
+Index page <br>
 ![convertrix-index](https://github.com/oliveguy/live-chat-app/assets/103153516/032ec361-459d-4479-b3d5-f7dde346bfb1)
-Various Conversions
+Various Conversions <br>
 ![convertrix-desktop_mass](https://github.com/oliveguy/live-chat-app/assets/103153516/566dd6e9-eb4d-48b2-8732-55e44d6c8374)
-Responsive design for mobile
+Responsive design for mobile <br>
 ![convertrix-mobile](https://github.com/oliveguy/live-chat-app/assets/103153516/2fa45d1d-64d6-4527-8903-d65f989f178f)
 
 ### Process
